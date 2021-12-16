@@ -1,0 +1,50 @@
+import time
+
+class Skateboard:
+    def __init__(self, wheels, trucks, deck):
+        self.wheels = wheels
+        self.trucks = trucks
+        self.deck = deck
+        
+    def printboard(self):
+        print(self.wheels, self.trucks, self.deck)
+
+class basic_complete(Skateboard):
+    pass
+
+x = basic_complete("spitfire", "indies", "FA")
+x2 = basic_complete("ricta", "tracker", "Plan B")
+
+
+
+        
+class Eighties_complete(Skateboard):
+    def __init__(self, wheels, trucks, deck, rails, nose_guard):
+        super().__init__(wheels, trucks, deck)
+        self.rails = rails
+        self.noseguard = nose_guard
+        
+    def print80s(self):
+         print(self.wheels, self.trucks, self.deck, self.rails, self.noseguard)
+        
+        
+og = Eighties_complete("OJ's", "indies", "G&S", "gnarRails", "Shnoz Guard")
+
+
+
+def skate_clerk():
+    print("whatup duuuude which complete do you want to buy")
+    time.sleep(1)
+    r = input("x, x2, or the rad og > ")
+    time.sleep(1)
+    if r == "x":            
+        x.printboard()
+    elif r == "x2":
+        x2.printboard()
+    elif r == "og":
+        og.print80s()
+    else:
+        print ("uhhh")
+        
+skate_clerk()
+    
