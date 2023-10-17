@@ -1,0 +1,7 @@
+def setup_guests(guest_list):
+    new_guest_list = {}
+    for guest in guest_list:
+        new_guest_list[guest] = 0
+    print (new_guest_list)
+    
+setup_guests(x)
