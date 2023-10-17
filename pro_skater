@@ -1,0 +1,70 @@
+class Skateboard:
+    def __init__(self, deck, wheels, trucks):
+        self.deck = deck
+        self.wheels = wheels
+        self.trucks = trucks
+
+class Shop_Deck(Skateboard):
+    def __init__(self, deck, wheels, trucks, prize):
+        super().__init__(deck, wheels, trucks)
+        self.prize = prize
+    def gimme(self):
+        print("ayyy, here's a", self.prize)
+
+class Skater:
+    def __init__(self, name, shoes):
+        self.name = name
+        self.shoes = shoes
+      
+
+class Fresh(Skater):
+    def __init__(self, name, shoes, style, trick1, trick2, best_trick):
+        super().__init__(name, shoes)
+        self.style = style
+        self.trick1 = trick1
+        self.trick2 = trick2
+        self.best_trick = best_trick
+    def trick_choice(self):
+        trick = input("what trick? Trick1, Trick2, or Best Trick?")
+        if trick == "Trick 1".lower() or trick == "Trick1" or trick == "Trick 1" or trick == "trick1":
+            print(self.trick1)
+        elif trick == "Trick 2".lower() or trick == "Trick2" or trick == "Trick 2" or trick == "trick2":
+            print(self.trick2)
+        elif trick == "Best Trick".lower() or trick == "Best trick" or trick == "Best Trick":
+            print(self.best_trick)
+        else:
+            print("um moving on, couldn't hear you over the Wu Tang")
+
+
+class Hesh(Skater):
+    def __init__(self, name, shoes, style, trick1, trick2, best_trick):
+        super().__init__(name, shoes)
+        self.style = style
+        self.trick1 = trick1
+        self.trick2 = trick2
+        self.best_trick = best_trick
+    def trick_choice(self):
+        trick = input("what trick? Trick1, Trick2, or Best Trick?")
+        if trick == "Trick 1".lower() or trick == "Trick1" or trick == "Trick 1" or trick == "trick1":
+            print(self.trick1)
+        elif trick == "Trick 2".lower() or trick == "Trick2" or trick == "Trick 2" or trick == "trick2":
+            print(self.trick2)
+        elif trick == "Best Trick".lower() or trick == "Best trick" or trick == "Best Trick":
+            print(self.best_trick)
+        else:
+            print("eh moving on, couldn't hear you over the Pantera")
+
+
+y = Fresh('John', 'Kareem Axions', 'buttery', 'kickflip', 'tail slide', 'tre flip')
+z = Hesh('Reuben', 'Chuck Taylors', 'Fast&Furious', 'kickflip indy', 'Tony Hawk 900', 
+         'hardflip stalefish to axle stall')
+
+
+x = Shop_Deck("Exodus", "spitfire", "venture", "free shirt")
+x.gimme()
+
+y.trick_choice()
+z.trick_choice()
+
+print(y.name, "'s style is real ", y.style)
+print(z.name, "'s style is real ", z.style)
