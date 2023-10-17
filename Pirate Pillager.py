@@ -1,3 +1,5 @@
+#THIS ONLY RUNS ON PYTHON 2
+
 import time
 
 Rooms = {"room1" : "The Gangplank", "room2" : "The Deck", 
